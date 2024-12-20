@@ -83,23 +83,23 @@ class TextEditor:
             self.save_as_file()
 
     def export_file(self):
-        file_path = filedialog.asksaveasfilename(defaultextension=".txt",
-                                                 filetypes=[("Text Files", "*.txt"), ("All Files", "*.*")])
+        file_path = filedialog.asksaveasfilename(defaultextension=".ScratchScript",
+                                                 filetypes=[("ScratchOSScript","*.ScratchScript"),("Text Files", "*.txt"), ("All Files", "*.*")])
         if file_path:
             text = self.text_area.get(1.0, tk.END).strip()
             converted_code = compiler.Compile(text)
             converted_code = "␤".join(converted_code.split('\n'))
-            with open(file_path, "w") as file:
+            with open(file_path, "w", encoding="utf-8") as file:
                 
                 file.write(converted_code)
             #self.file_path = file_path
             #self.root.title(f"Simple Text Editor - {file_path}")
             messagebox.showinfo("Export File", "File exported successfully!")
     def save_as_file(self):
-        file_path = filedialog.asksaveasfilename(defaultextension=".txt",
-                                                 filetypes=[("Text Files", "*.txt"), ("All Files", "*.*")])
+        file_path = filedialog.asksaveasfilename(defaultextension=".ScratchScript",
+                                                 filetypes=[("ScratchOSScript","*.ScratchScript"),("Text Files", "*.txt"), ("All Files", "*.*")])
         if file_path:
-            with open(file_path, "w") as file:
+            with open(file_path, "w", encoding="utf-8") as file:
                 file.write(self.text_area.get(1.0, tk.END))
             self.file_path = file_path
             self.root.title(f"Simple Text Editor - {file_path}")

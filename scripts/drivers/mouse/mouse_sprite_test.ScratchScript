@@ -1,0 +1,1 @@
+label mainloop␤tchrset␤getnmdvar 0001 mouse-dx␤getnmdvar 0002 mouse-dy␤tcursorsetxvar 0001␤tcursorsetyvar 0002␤tchrset cstm1101110111110100␤goto mainloop

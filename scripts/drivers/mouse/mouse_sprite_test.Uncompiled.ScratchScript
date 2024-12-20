@@ -1,0 +1,8 @@
+label mainloop
+tchrset
+getnmdvar $mouse-x mouse-dx
+getnmdvar $mouse-y mouse-dy
+tcursorsetxvar $mouse-x
+tcursorsetyvar $mouse-y 
+tchrset cstm1101110111110100
+goto mainloop
