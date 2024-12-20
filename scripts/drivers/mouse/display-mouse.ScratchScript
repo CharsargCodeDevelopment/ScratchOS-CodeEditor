@@ -1,0 +1,4 @@
+label mainloop
+getnmdvar $mouse-delta-x mouse-dx
+getnmdvar $mouse-delta-y mouse-dy
+goto mainloop

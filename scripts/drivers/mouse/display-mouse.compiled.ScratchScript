@@ -1,0 +1,1 @@
+label mainloop␤getnmdvar 0001 mouse-dx␤getnmdvar 0002 mouse-dy␤goto mainloop
